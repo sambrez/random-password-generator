@@ -16,6 +16,12 @@ function generatePassword() {
   const upper = confirm("Click OK to include uppercase letters.");
   const numbers = confirm("Click OK to include numbers.");
   const special = confirm("Click OK to include special characters.");
+  if (lower || upper || numbers || special) {}
+  else {
+    alert("No characters were selected.")
+    return
+  }
+  
   };
 
 
