@@ -1,14 +1,15 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+// targeting the generate password button
+const generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
+// writePassword function contains undefined functions (generatePassword)
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-// Add event listener to generate button
+// when "generate password" button is clicked, writePassword function is called
 generateBtn.addEventListener("click", writePassword);
