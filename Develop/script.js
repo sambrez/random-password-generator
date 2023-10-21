@@ -1,8 +1,16 @@
 // targeting the generate password button
 const generateBtn = document.querySelector("#generate");
+// object establishing the character types
+let characterSet = {
+  lowerCaseLetter: "abcdefghijklmnopqrstuvwxyz",
+  upperCaseLetter: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  digits: "0123456789",
+  symbols: " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+  }
 
 function generatePassword() {
-  const length = prompt("How many characters do you want the password to contain?");
+  // variable prompts the user and the if statment validates the user input
+  let length = prompt("How many characters do you want the password to contain?");
   if (length < 8) {
     alert("Not enough characters.")
     return
@@ -12,6 +20,7 @@ function generatePassword() {
     return
   }
   
+  // the variables prompt the user and the if statement validates the user input
   const lower = confirm("Click OK to include lowercase letters.");
   const upper = confirm("Click OK to include uppercase letters.");
   const numbers = confirm("Click OK to include numbers.");
@@ -21,7 +30,25 @@ function generatePassword() {
     alert("No characters were selected.")
     return
   }
-  
+
+  let charString = "";
+  if (lower) {
+   charString = characterSet.lowerCaseLetter
+  };
+  if (upper) {
+    charString = characterSet.upperCaseLetter
+  };
+  if (numbers) {
+    charString = characterSet.digits
+  };
+  if (special) {
+    charString = characterSet.symbols
+  };
+ 
+
+
+ return
+
   };
 
 
@@ -37,24 +64,3 @@ function writePassword() {
 // when "generate password" button is clicked, writePassword function is called
 generateBtn.addEventListener("click", writePassword);
 
-
-// let characterSet = {
-//   lowerCaseLetter: "abcdefghijklmnopqrstuvwxyz",
-//   upperCaseLetter: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-//   numbers: "0123456789",
-//   special: " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-//   }
-
-
-// const charTypes = {
-    
-// };
-// if (charTypes.length === 0) {
-//   alert("No character types selected.")
-//   return
-// }
-
-// let password = '';
-//   for (let i = 0; i < length; i++) {
-
-//   }
