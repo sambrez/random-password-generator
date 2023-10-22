@@ -59,7 +59,7 @@ function generatePassword() {
   };
 
 
-// writePassword function contains undefined functions (generatePassword)
+// writePassword function is what pushes generated password to the text area of the page
 function writePassword() {
   let password = generatePassword();
   const passwordText = document.querySelector("#password");
