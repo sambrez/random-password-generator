@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-![alt text = "screenshot of password generator platform"](./assets/images/profile.png)
+![alt text = "screenshot of password generator platform"](./Assets/screenshot.png)
 
 ## Credits
 
