@@ -20,19 +20,21 @@ function generatePassword() {
     return
   }
   
-  // the variables prompt the user on character type and the if statement validates the user input
+  // the variables prompt the user on desired character type 
   const lower = confirm("Click OK to include lowercase letters.");
   const upper = confirm("Click OK to include uppercase letters.");
   const numbers = confirm("Click OK to include numbers.");
   const special = confirm("Click OK to include special characters.");
   let charString = "";
   let finalPassword = "";
+  // if statement validates the user input reggarding selected character types
   if (lower || upper || numbers || special) {}
   else {
     alert("No characters were selected.")
     return
   }
 
+  // if statement builds character string based on user input results regarding character types
   if (lower) {
    charString = charString + characterSet.lowerCaseLetter
   };
@@ -46,7 +48,11 @@ function generatePassword() {
     charString = charString + characterSet.symbols
   };
 
-for ()
+  // for loop iterates through the charString string to generate random password
+  for (let i = 0; i < length; i++) {
+    let set = Math.floor(Math.random() * charString.length);
+    finalPassword = finalPassword + charString[set];
+  }
 
  return finalPassword;
 
